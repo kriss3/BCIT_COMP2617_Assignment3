@@ -1,4 +1,9 @@
+/*
+Assignment 03;
+Krzysztof Szczurowski
+October 10th 2019
 
+*/
 
 #include <iostream>
 #include <string>
