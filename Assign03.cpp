@@ -59,7 +59,36 @@ void multiplication()
 
 void correctMessage() 
 {
-	cout << "Correct!\n\n";
+	enum Answer {
+		Correct,
+		Very_Good,
+		Way_To_Go,
+		Fantastic,
+		You_Are_The_Best,
+		Answer_Count
+	};
+
+	Answer a = static_cast<Answer>(rand() % Answer_Count);
+	switch (a)
+	{
+	case Correct:
+		cout << "Correct\n\n";
+		break;
+	case Very_Good:
+		cout << "Very Good!!!\n\n";
+		break;
+	case Way_To_Go:
+		cout << "Way To Go!!!\n\n";
+	case Fantastic:
+		cout << "Fantastic!!!\n\n";
+		break;
+	case You_Are_The_Best:
+		cout << "You Are The Best\n\n";
+		break;
+	default:
+		cout << "Buuu something went wrong!\n\n";
+		break;
+	}
 }
 
 void incorrectMessage() 
