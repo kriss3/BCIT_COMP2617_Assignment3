@@ -59,30 +59,30 @@ void multiplication()
 
 void correctMessage() 
 {
-	enum Answer {
-		Correct,
+	enum class Answer {
+		Correct = 0,
 		Very_Good,
 		Way_To_Go,
 		Fantastic,
-		You_Are_The_Best,
-		Answer_Count
+		You_Are_The_Best
 	};
 
-	Answer a = static_cast<Answer>(rand() % Answer_Count);
+	Answer a = static_cast<Answer>(rand() % 5);
 	switch (a)
 	{
-	case Correct:
+	case Answer::Correct:
 		cout << "Correct\n\n";
 		break;
-	case Very_Good:
+	case Answer::Very_Good:
 		cout << "Very Good!!!\n\n";
 		break;
-	case Way_To_Go:
+	case Answer::Way_To_Go:
 		cout << "Way To Go!!!\n\n";
-	case Fantastic:
+		break;
+	case Answer::Fantastic:
 		cout << "Fantastic!!!\n\n";
 		break;
-	case You_Are_The_Best:
+	case Answer::You_Are_The_Best:
 		cout << "You Are The Best\n\n";
 		break;
 	default:
@@ -93,7 +93,36 @@ void correctMessage()
 
 void incorrectMessage() 
 {
-	cout << "Wrong! Try again\n? ";
+	enum class Answer {
+		INCORRECT = 0,
+		NOT_SO_GREAT,
+		NOT_GOOD,
+		NOT_QUITE_WRIGHT,
+		WRONG
+	};
+
+	Answer a = static_cast<Answer>(rand() % 5);
+	switch (a)
+	{
+	case Answer::INCORRECT:
+		cout << "Incorrect. Try one more time.\n? ";
+		break;
+	case Answer::NOT_SO_GREAT:
+		cout << "Not so great. One more time.\n? ";
+		break;
+	case Answer::NOT_GOOD:
+		cout << "Not good this time. Try again\n? ";
+		break;
+	case Answer::NOT_QUITE_WRIGHT:
+		cout << "Not quite wright. Try one more time.\n? ";
+		break;
+	case Answer::WRONG:
+		cout << "You got it wrong this time. Try again.\n? ";
+		break;
+	default:
+		cout << "Buuu something went wrong!\n? ";
+		break;
+	}
 }
 
 int doRand()
