@@ -62,7 +62,8 @@ void multiplication()
 void correctMessage() 
 {
 	//enum of possible message when user answer the question correctly;
-	enum class Answer {
+	enum class Answer 
+	{
 		CORRECT = 0,
 		VERYGOOD,
 		WAYTOGO,
@@ -100,7 +101,8 @@ void correctMessage()
 void incorrectMessage() 
 {
 	//enum of possible message when user answer is incorrect;
-	enum class Answer {
+	enum class Answer 
+	{
 		INCORRECT = 0,
 		NOTSOGREAT,
 		NOTGOOD,
